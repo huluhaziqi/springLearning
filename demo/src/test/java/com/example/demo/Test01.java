@@ -107,4 +107,10 @@ public class Test01 {
         HelloService helloService2 = classPathXmlApplicationContext.getBean("byName",HelloService.class);
         helloService2.sayHello();
     }
+    @Test
+    public void test08(){
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:hello6.xml");
+        HelloService helloService = classPathXmlApplicationContext.getBean("bean",HelloService.class);
+        helloService.sayHello();
+    }
 }
