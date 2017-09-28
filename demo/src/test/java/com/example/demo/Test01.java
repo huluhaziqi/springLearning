@@ -112,5 +112,7 @@ public class Test01 {
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:hello6.xml");
         HelloService helloService = classPathXmlApplicationContext.getBean("bean",HelloService.class);
         helloService.sayHello();
+        //boolean支持on/off、yes/no、1/0、以及true/false 配置
+
     }
 }

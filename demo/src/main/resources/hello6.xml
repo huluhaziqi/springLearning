@@ -10,5 +10,6 @@
     <bean id="bean" class="service.HelloServiceImpl">
         <property name="message" value="beanMessage"/>
         <property name="name" value="nameBean"/>
+        <property name="ok" value="on"/>
     </bean>
 </beans>

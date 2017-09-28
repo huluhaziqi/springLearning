@@ -6,10 +6,13 @@ public class HelloServiceImpl implements HelloService {
 
     private String name;
 
+    private boolean isOk;
+
     public void sayHello() {
         System.out.println("hello world!");
         System.out.println(name);
         System.out.println(message);
+        System.out.println(isOk);
     }
     public HelloServiceImpl(String message) {
         this.message = message;
@@ -22,6 +25,12 @@ public class HelloServiceImpl implements HelloService {
     public HelloServiceImpl(String message, String name) {
         this.message = message;
         this.name = name;
+    }
+
+    public HelloServiceImpl(String message, String name, boolean isOk) {
+        this.message = message;
+        this.name = name;
+        this.isOk = isOk;
     }
 
     public String getMessage() {
@@ -38,5 +47,13 @@ public class HelloServiceImpl implements HelloService {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isOk() {
+        return isOk;
+    }
+
+    public void setOk(boolean ok) {
+        isOk = ok;
     }
 }
