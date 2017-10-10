@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    ">
+    <bean id="arrayBean" class="com.example.model.ArrayBean">
+        <property name="array">
+            <array value-type="java.lang.String" merge="default">
+                <value>1</value>
+                <value>1</value>
+                <value>1</value>
+                <value>1</value>
+                <value>1</value>
+                <value>1</value>
+            </array>
+        </property>
+        <property name="arrays">
+            <array value-type="java.lang.String" merge="default">
+                <array>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>1</value>
+                </array>
+                <array>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                    <value>2</value>
+                    <value>1</value>
+                    <value>1</value>
+                </array>
+
+            </array>
+        </property>
+    </bean>
+</beans>

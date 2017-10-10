@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.test.context.junit4.SpringRunner;
-import service.HelloService;
+import com.example.service.HelloService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

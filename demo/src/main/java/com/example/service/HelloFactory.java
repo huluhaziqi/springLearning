@@ -1,4 +1,4 @@
-package service;
+package com.example.service;
 
 public class HelloFactory {
     public static HelloService newInstance(String message){
