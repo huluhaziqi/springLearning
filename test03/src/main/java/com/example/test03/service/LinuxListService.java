@@ -1,9 +1,8 @@
-package com.example.test04;
+package com.example.test03.service;
 
 
-import org.springframework.stereotype.Service;
+import com.example.test03.ListService;
 
-@Service
 public class LinuxListService implements ListService {
     @Override
     public void showListCmd() {

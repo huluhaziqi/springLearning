@@ -1,5 +1,10 @@
-package com.example.test04;
+package com.example.test03.config;
 
+import com.example.test03.LinuxCondition;
+import com.example.test03.ListService;
+import com.example.test03.WindowsCondition;
+import com.example.test03.service.LinuxListService;
+import com.example.test03.service.WindowsListService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
