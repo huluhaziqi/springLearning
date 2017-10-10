@@ -1,7 +1,7 @@
 package com.example.test03.config;
 
-import org.springframework.context.annotation.ComponentScan;
+import com.example.test03.annotation.CombineConfiguration;
 
-@ComponentScan("com.example.test03.service")
+@CombineConfiguration("com.example.test03.service")
 public class AnnotationConfig {
 }
