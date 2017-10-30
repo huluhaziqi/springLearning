@@ -12,8 +12,8 @@
 <script>
     function req(){
         $.ajax({
-            url: "conver",
-            data: "1-linxiaobin", //1
+            url: "convert",
+            data: "linxiaobin-1", //1
             type:"POST",
             contentType:"application/x-lin", //2
             success: function(data){

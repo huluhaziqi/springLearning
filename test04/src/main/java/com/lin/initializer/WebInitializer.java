@@ -11,23 +11,6 @@ import javax.servlet.ServletRegistration;
 
 public class WebInitializer implements WebApplicationInitializer {
 
-//    @Override
-//    public void onStartup(ServletContext servletContext) throws ServletException {
-//        AnnotationConfigWebApplicationContext  context = new AnnotationConfigWebApplicationContext();
-//
-//        context.register(MyMvcConfig.class);
-//
-//        context.setServletContext(servletContext);
-//
-//        ServletRegistration.Dynamic servletRegistration =
-//                servletContext.addServlet("dispatcher",new DispatcherServlet(context));
-//        servletRegistration.addMapping("/");
-//        servletRegistration.setLoadOnStartup(1);
-//        servletRegistration.setAsyncSupported(true);//1
-//
-//
-//
-//    }
 @Override
 public void onStartup(ServletContext servletContext)
         throws ServletException {
@@ -38,7 +21,7 @@ public void onStartup(ServletContext servletContext)
     ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx)); //3
     servlet.addMapping("/");
     servlet.setLoadOnStartup(1);
-    servlet.setAsyncSupported(true);//1
+    servlet.setAsyncSupported(true);//1开启异步支持
 
 }
 }

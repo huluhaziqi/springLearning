@@ -11,64 +11,15 @@ import org.springframework.util.StreamUtils;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.List;
 
 public class MyMessageConverter extends AbstractHttpMessageConverter<DemoObj> {
     public MyMessageConverter() {
         super(new MediaType("application","x-lin", Charset.forName("UTF-8")));
     }
 
-    protected MyMessageConverter(MediaType supportedMediaType) {
-        super(supportedMediaType);
-    }
-
-    protected MyMessageConverter(MediaType... supportedMediaTypes) {
-        super(supportedMediaTypes);
-    }
-
-    @Override
-    public void setSupportedMediaTypes(List<MediaType> supportedMediaTypes) {
-        super.setSupportedMediaTypes(supportedMediaTypes);
-    }
-
-    @Override
-    public List<MediaType> getSupportedMediaTypes() {
-        return super.getSupportedMediaTypes();
-    }
-
-    @Override
-    public boolean canRead(Class<?> clazz, MediaType mediaType) {
-        return super.canRead(clazz, mediaType);
-    }
-
-    @Override
-    protected boolean canRead(MediaType mediaType) {
-        return super.canRead(mediaType);
-    }
-
-    @Override
-    public boolean canWrite(Class<?> clazz, MediaType mediaType) {
-        return super.canWrite(clazz, mediaType);
-    }
-
-    @Override
-    protected boolean canWrite(MediaType mediaType) {
-        return super.canWrite(mediaType);
-    }
-
-    @Override
-    protected MediaType getDefaultContentType(DemoObj demoObj) throws IOException {
-        return super.getDefaultContentType(demoObj);
-    }
-
-    @Override
-    protected Long getContentLength(DemoObj demoObj, MediaType contentType) throws IOException {
-        return super.getContentLength(demoObj, contentType);
-    }
-
     @Override
     protected boolean supports(Class<?> aClass) {
-        return false;
+        return DemoObj.class.isAssignableFrom(aClass);
     }
 
     @Override
